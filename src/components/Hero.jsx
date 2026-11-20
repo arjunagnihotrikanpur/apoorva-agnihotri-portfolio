@@ -43,7 +43,6 @@ export default function Hero() {
             className="eyebrow mb-[clamp(0.75rem,2.4svh,1.75rem)] mt-[clamp(0.5rem,1.5svh,1rem)] flex flex-wrap items-center gap-x-4 gap-y-2 text-ink/70"
           >
             <span>{profile.role}</span>
-            <span className="h-px w-8 bg-ink/30" />
             <span>{profile.years}+ Years of Experience</span>
           </motion.div>
 
@@ -78,7 +77,7 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.85, ease }}
             className="mt-[clamp(1rem,3.4svh,2.25rem)] flex flex-wrap gap-2.5 sm:gap-3"
           >
-            <Button href="#work" onClick={(e) => scrollToSection(e, 'work')} icon={<ArrowDownRight size={16} />}>
+            <Button href="#campaigns" onClick={(e) => scrollToSection(e, 'campaigns')} icon={<ArrowDownRight size={16} />}>
               Explore My Work
             </Button>
             <Button

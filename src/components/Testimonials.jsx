@@ -9,7 +9,7 @@ export default function Testimonials() {
     <section id="testimonials" className="bg-ivory py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <Reveal>
-          <SectionLabel number="04">Client testimonials</SectionLabel>
+          <SectionLabel>Client testimonials</SectionLabel>
         </Reveal>
 
         {hasTestimonials ? (

@@ -39,7 +39,7 @@ export default function CaseStudies() {
     <section id="work" className="bg-ivory py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <Reveal>
-          <SectionLabel number="02">Proof of work</SectionLabel>
+          <SectionLabel>Proof of work</SectionLabel>
         </Reveal>
 
         <div className="mt-8 grid items-end gap-6 lg:grid-cols-12">
@@ -59,7 +59,7 @@ export default function CaseStudies() {
         <article className="mt-16 border-t-2 border-ink pt-10 sm:mt-24">
           <div className="grid gap-8 lg:grid-cols-12">
             <Reveal className="lg:col-span-4">
-              <div className="eyebrow text-coral">Case study 01</div>
+              <div className="eyebrow text-coral">Case study</div>
               <h3 className="display mt-4 text-4xl font-bold sm:text-5xl">
                 Safe-T Professionals <span className="text-coral">&amp;</span> Anna Martinez
               </h3>
@@ -105,7 +105,7 @@ export default function CaseStudies() {
             </Reveal>
             <Reveal delay={0.1} className="bg-ivory py-2 md:pl-10">
               <div className="eyebrow text-coral">Voice two</div>
-              <h4 className="display mt-3 text-2xl font-semibold">Anna Martinez — Personal Branding</h4>
+              <h4 className="display mt-3 text-2xl font-semibold">Anna Martinez: personal branding</h4>
               <List items={anna} />
             </Reveal>
           </div>
@@ -118,7 +118,7 @@ export default function CaseStudies() {
                 width={859}
                 height={715}
                 alt="LinkedIn analytics for a Safe-T Professionals hiring post showing impressions, members reached, engagements, engagement rate and clicks"
-                caption="Post analytics from the Safe-T Professionals page — a hiring post, and how it supports page credibility."
+                caption="Post analytics from the Safe-T Professionals page: a hiring post, and how it supports page credibility."
               />
             </Reveal>
             <Reveal delay={0.1} className="lg:col-span-7 lg:pl-8">

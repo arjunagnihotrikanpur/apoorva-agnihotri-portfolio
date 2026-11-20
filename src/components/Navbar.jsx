@@ -115,10 +115,9 @@ export default function Navbar() {
                   <a
                     href={`#${item.id}`}
                     onClick={(e) => go(e, item.id)}
-                    className="display flex items-baseline justify-between py-4 text-4xl font-medium"
+                    className="display block py-4 text-4xl font-medium"
                   >
                     {item.label}
-                    <span className="eyebrow text-coral">0{i + 1}</span>
                   </a>
                 </motion.li>
               ))}

@@ -13,7 +13,7 @@ export default function About() {
     <section id="about" className="relative bg-paper py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <Reveal>
-          <SectionLabel number="01">About</SectionLabel>
+          <SectionLabel>About</SectionLabel>
         </Reveal>
 
         <div className="mt-8 grid gap-14 lg:grid-cols-12">
@@ -78,8 +78,7 @@ export default function About() {
               transition={{ duration: 0.8, delay: i * 0.12, ease }}
               className="group border-b border-ink/20 py-9 last:border-b-0 md:border-b-0 md:border-r md:px-8 md:first:pl-0 md:last:border-r-0 md:last:pr-0"
             >
-              <div className="eyebrow text-coral">0{i + 1}</div>
-              <h3 className="display mt-3 text-3xl font-semibold transition-transform duration-500 group-hover:translate-x-1">
+              <h3 className="display text-3xl font-semibold transition-transform duration-500 group-hover:translate-x-1">
                 {t.word}
               </h3>
               <p className="mt-3 text-sm leading-relaxed text-ink/70">{t.note}</p>

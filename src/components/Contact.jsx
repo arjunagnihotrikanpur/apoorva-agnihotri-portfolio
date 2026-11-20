@@ -65,7 +65,7 @@ export default function Contact() {
     <section id="contact" className="bg-ink pt-24 text-ivory sm:pt-32">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <Reveal>
-          <SectionLabel number="05" light>
+          <SectionLabel light>
             Contact
           </SectionLabel>
         </Reveal>
