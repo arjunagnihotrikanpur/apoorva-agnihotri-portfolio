@@ -3,6 +3,7 @@ import Hero from './components/Hero'
 import About from './components/About'
 import CaseStudies from './components/CaseStudies'
 import Campaigns from './components/Campaigns'
+import Achievements from './components/Achievements'
 import Testimonials from './components/Testimonials'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
@@ -20,8 +21,9 @@ export default function App() {
       <main>
         <Hero />
         <About />
-        <CaseStudies />
         <Campaigns />
+        <CaseStudies />
+        <Achievements />
         <Testimonials />
         <Contact />
       </main>

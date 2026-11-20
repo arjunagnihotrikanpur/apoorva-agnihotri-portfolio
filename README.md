@@ -24,6 +24,23 @@ npm run lint      # oxlint
 | Real screenshots and portrait | `src/assets/images/` (extracted from the supplied PDF) |
 | Firebase | `src/firebase/config.js` |
 
+### Achievements
+
+The Achievements section is organised around Apoorva's three pillars (growth you can
+measure, teams that deliver, systems that scale). Its content lives in `src/data/content.js`:
+`achievementAward` (award and photo caption), `achievementGrowth`, `achievementStats`,
+`achievementTeam`, `achievementSystems` and `achievementHighlights`. The award photo is
+`src/assets/images/insidea-awards-ceremony.webp`. Every item
+there comes from the campaign analytics and case studies in Apoorva's PDF. Add
+awards, certifications or press mentions to `achievementHighlights` once there are
+real ones to show.
+
+### Section order
+
+`src/App.jsx` sets the order of the sections and `navItems` in `src/data/content.js`
+sets the nav links. Campaigns currently comes before Case Studies so the 9,103
+impressions analytics screenshot is the first proof a visitor sees.
+
 ### Adding testimonials
 
 Add objects to `testimonials` in `src/data/content.js`. The "coming soon" panel

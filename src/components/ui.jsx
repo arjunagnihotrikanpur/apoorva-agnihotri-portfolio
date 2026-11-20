@@ -50,14 +50,9 @@ export function Counter({ to, decimals = 0, suffix = '', prefix = '', className 
   )
 }
 
-export function SectionLabel({ number, children, light = false }) {
-  return (
-    <div className={`eyebrow flex items-center gap-3 ${light ? 'text-ivory/70' : 'text-stone'}`}>
-      <span className="text-coral">{number}</span>
-      <span className={`h-px w-10 ${light ? 'bg-ivory/30' : 'bg-ink/25'}`} />
-      <span>{children}</span>
-    </div>
-  )
+export function SectionLabel({ children, light = false, onAccent = false }) {
+  const tone = onAccent ? 'text-ink' : light ? 'text-coral' : 'text-coral-deep'
+  return <div className={`eyebrow ${tone}`}>{children}</div>
 }
 
 export function Button({ href, children, variant = 'solid', icon, external = false, onClick, className = '' }) {

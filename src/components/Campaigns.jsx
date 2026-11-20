@@ -36,24 +36,25 @@ export default function Campaigns() {
     <section id="campaigns" className="bg-paper py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <Reveal>
-          <SectionLabel number="03">Successful campaigns</SectionLabel>
+          <SectionLabel>Successful campaigns</SectionLabel>
         </Reveal>
         <Reveal as="h2" className="display mt-8 text-[clamp(2.6rem,7vw,6rem)] font-bold">
           Ideas that <span className="italic text-coral">moved</span> the numbers.
         </Reveal>
 
-        {/* ---------- Campaign 01 ---------- */}
+        {/* ---------- Campaign: #DuckItForward ---------- */}
         <article className="mt-16 sm:mt-24" aria-labelledby="duck-title">
-          <div className="grid gap-10 border-t-2 border-ink pt-10 lg:grid-cols-12">
+          {/* Lead with the proof: the 9,103-impression analytics screenshot comes first. */}
+          <div className="grid items-start gap-10 border-t-2 border-ink pt-10 lg:grid-cols-12">
             <Reveal className="lg:col-span-5">
-              <div className="eyebrow text-coral">Campaign 01 · Engagement</div>
+              <div className="eyebrow text-coral-deep">Engagement campaign</div>
               <h3 id="duck-title" className="display mt-4 break-words text-[clamp(2.2rem,3.7vw,3.4rem)] font-bold">
                 #DuckItForward
               </h3>
               <dl className="mt-8 grid grid-cols-2 gap-5 text-sm">
                 <div>
                   <dt className="eyebrow text-stone">Client</dt>
-                  <dd className="mt-1.5 text-base">Safe-T Professionals</dd>
+                  <dd className="mt-1.5 text-base">Safe-T Professionals (STP)</dd>
                 </div>
                 <div>
                   <dt className="eyebrow text-stone">Platform</dt>
@@ -66,27 +67,80 @@ export default function Campaigns() {
                 workers to celebrate colleagues who demonstrated proactive safety behaviors, shared safety saves, and
                 went the extra mile to protect their teams.
               </p>
+              <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap lg:flex-col lg:items-stretch">
+                {campaignPosts.map((p) => (
+                  <Button key={p.href} href={p.href} external variant="solid" icon={<ArrowUpRight size={16} />}>
+                    <span className="whitespace-nowrap">View Campaign Post</span>{' '}<span className="whitespace-nowrap text-ivory/60">· {p.label}</span>
+                  </Button>
+                ))}
+              </div>
             </Reveal>
 
-            <div className="lg:col-span-7">
-              <Reveal delay={0.1}>
-                <div className="eyebrow text-stone">What made it successful</div>
-                <ol className="mt-4 divide-y divide-ink/15 border-y border-ink/15">
-                  {duckPoints.map(([title, text], i) => (
-                    <li key={title} className="group grid grid-cols-[2.5rem_1fr] gap-x-3 py-4 sm:grid-cols-[3rem_1fr]">
-                      <span className="display text-lg font-semibold text-coral">0{i + 1}</span>
-                      <div>
-                        <h4 className="display text-lg font-semibold transition-transform duration-300 group-hover:translate-x-1">
-                          {title}
-                        </h4>
-                        <p className="mt-1 text-sm leading-relaxed text-ink/70">{text}</p>
-                      </div>
-                    </li>
-                  ))}
-                </ol>
-              </Reveal>
-            </div>
+            <Reveal delay={0.05} className="lg:col-span-7">
+              <Screenshot
+                src={duck1}
+                width={862}
+                height={691}
+                alt="LinkedIn post analytics for a #DuckItForward post: 9,103 impressions, 6,150 members reached, 844 engagements, 9.3% engagement rate"
+                caption="Post analytics: the #DuckItForward recognition story."
+              />
+            </Reveal>
           </div>
+
+          {/* post-level numbers from the first screenshot */}
+          <Reveal className="mt-14">
+            <div className="eyebrow text-stone">Post-level analytics, single post</div>
+            <dl className="mt-5 grid grid-cols-2 gap-x-6 gap-y-8 sm:grid-cols-3 lg:grid-cols-6">
+              {duckStats.map((s) => (
+                <div key={s.label} className="border-t border-ink/30 pt-3">
+                  <dd className="display text-4xl font-bold xl:text-5xl">
+                    <Counter to={s.to} decimals={s.decimals} suffix={s.suffix} />
+                  </dd>
+                  <dt className="mt-1 text-xs uppercase tracking-widest text-stone">{s.label}</dt>
+                </div>
+              ))}
+            </dl>
+            <p className="mt-6 text-xs leading-relaxed text-stone">
+              These figures are from one campaign post, not campaign totals.
+            </p>
+          </Reveal>
+
+          {/* why it worked */}
+          <Reveal className="mt-20">
+            <div className="grid gap-8 lg:grid-cols-12">
+              <div className="lg:col-span-4">
+                <h4 className="display text-2xl font-semibold">What made it successful</h4>
+                <div className="mt-8 hidden lg:block">
+                  <Screenshot
+                    src={duck2}
+                    width={867}
+                    height={718}
+                    alt="LinkedIn post analytics for a Safe-T Professionals safety leadership post"
+                    caption="Post analytics: a safety leadership post from the same page."
+                  />
+                </div>
+              </div>
+              <ul className="divide-y divide-ink/15 border-y border-ink/15 lg:col-span-8">
+                {duckPoints.map(([title, text]) => (
+                  <li key={title} className="group py-4">
+                    <h5 className="display text-lg font-semibold transition-transform duration-300 group-hover:translate-x-1">
+                      {title}
+                    </h5>
+                    <p className="mt-1 text-sm leading-relaxed text-ink/70">{text}</p>
+                  </li>
+                ))}
+              </ul>
+              <div className="lg:hidden">
+                <Screenshot
+                  src={duck2}
+                  width={867}
+                  height={718}
+                  alt="LinkedIn post analytics for a Safe-T Professionals safety leadership post"
+                  caption="Post analytics: a safety leadership post from the same page."
+                />
+              </div>
+            </div>
+          </Reveal>
 
           {/* impact */}
           <Reveal className="mt-14">
@@ -98,66 +152,15 @@ export default function Campaigns() {
               </p>
             </div>
           </Reveal>
-
-          {/* analytics */}
-          <div className="mt-16 grid items-start gap-10 lg:grid-cols-12">
-            <Reveal className="lg:col-span-5">
-              <div className="eyebrow text-stone">Post-level analytics · single post</div>
-              <dl className="mt-5 grid grid-cols-2 gap-x-6 gap-y-8 sm:grid-cols-3 lg:grid-cols-2">
-                {duckStats.map((s) => (
-                  <div key={s.label} className="border-t border-ink/30 pt-3">
-                    <dd className="display text-4xl font-bold sm:text-5xl">
-                      <Counter to={s.to} decimals={s.decimals} suffix={s.suffix} />
-                    </dd>
-                    <dt className="mt-1 text-xs uppercase tracking-widest text-stone">{s.label}</dt>
-                  </div>
-                ))}
-              </dl>
-              <p className="mt-6 text-xs leading-relaxed text-stone">
-                These figures are from one campaign post, not campaign totals.
-              </p>
-              <div className="mt-8 flex flex-col gap-3 sm:flex-row lg:flex-col xl:flex-row">
-                {campaignPosts.map((p) => (
-                  <Button key={p.href} href={p.href} external variant="solid" icon={<ArrowUpRight size={16} />}>
-                    View Campaign Post <span className="text-ivory/60">· {p.label.replace('Post ', '')}</span>
-                  </Button>
-                ))}
-              </div>
-            </Reveal>
-
-            <div className="grid gap-6 sm:grid-cols-2 lg:col-span-7">
-              <Reveal delay={0.05}>
-                <Screenshot
-                  src={duck1}
-                  width={862}
-                  height={691}
-                  alt="LinkedIn post analytics for a #DuckItForward post: 9,103 impressions, 6,150 members reached, 844 engagements, 9.3% engagement rate"
-                  caption="Post analytics — the #DuckItForward recognition story."
-                />
-              </Reveal>
-              <Reveal delay={0.15} className="sm:mt-12">
-                <Screenshot
-                  src={duck2}
-                  width={867}
-                  height={718}
-                  alt="LinkedIn post analytics for a Safe-T Professionals safety leadership post"
-                  caption="Post analytics — a safety leadership post from the same page."
-                />
-              </Reveal>
-            </div>
-          </div>
         </article>
       </div>
 
-      {/* ---------- Campaign 02: OnIndus ---------- */}
+      {/* ---------- Campaign: OnIndus ---------- */}
       <article className="mt-24 bg-ink py-20 text-ivory sm:mt-32 sm:py-28" aria-labelledby="onindus-title">
         <div className="mx-auto max-w-7xl px-5 sm:px-8">
           <Reveal>
-            <div className="eyebrow flex flex-wrap items-center gap-x-4 gap-y-1 text-ivory/70">
-              <span className="text-coral">Campaign 02</span>
-              <span className="h-px w-8 bg-ivory/30" />
-              <span>OnIndus · LinkedIn</span>
-              <span className="h-px w-8 bg-ivory/30" />
+            <div className="eyebrow flex flex-wrap gap-x-6 gap-y-1 text-ivory/70">
+              <span className="text-coral">OnIndus · LinkedIn</span>
               <span>B2B audience growth &amp; webinar signups</span>
             </div>
           </Reveal>
