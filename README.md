@@ -26,8 +26,11 @@ npm run lint      # oxlint
 
 ### Achievements
 
-The Achievements section reads from `achievementStats` (the big numbers) and
-`achievementHighlights` (the list underneath) in `src/data/content.js`. Every item
+The Achievements section is organised around Apoorva's three pillars (growth you can
+measure, teams that deliver, systems that scale). Its content lives in `src/data/content.js`:
+`achievementAward` (award and photo caption), `achievementGrowth`, `achievementStats`,
+`achievementTeam`, `achievementSystems` and `achievementHighlights`. The award photo is
+`src/assets/images/insidea-awards-ceremony.webp`. Every item
 there comes from the campaign analytics and case studies in Apoorva's PDF. Add
 awards, certifications or press mentions to `achievementHighlights` once there are
 real ones to show.

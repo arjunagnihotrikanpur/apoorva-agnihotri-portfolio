@@ -43,6 +43,34 @@ export const achievementStats = [
   { to: 9.3, decimals: 1, suffix: '%', label: 'Engagement rate on that post', detail: '844 engagements on one LinkedIn post' },
 ]
 
+// New achievements from Apoorva's updated PDF. They follow her own three pillars:
+// growth you can measure, teams that deliver, systems that scale.
+export const achievementIntro =
+  "I've spent 7+ years running social for agencies and in-house B2B teams, and my work comes down to three things."
+
+export const achievementAward = {
+  title: 'Client Satisfaction Star',
+  text: 'Awarded at the INSIDEA conference, Thailand 2026.',
+  caption: 'INSIDEA Awards Ceremony.',
+}
+
+export const achievementGrowth = [
+  { to: 30, prefix: '+', suffix: '%', label: 'Client engagement', detail: 'Campaigns led at WebWise Digital' },
+  { to: 25, prefix: '+', suffix: '%', label: 'Organic reach', detail: 'Campaigns led at WebWise Digital' },
+  { to: 20, prefix: '+', suffix: '%', label: 'Conversion rates', detail: 'Campaigns led at WebWise Digital' },
+  { to: 40, prefix: '+', suffix: '%', label: 'Engagement lift', detail: 'Recruitment content for AVA Consulting, on LinkedIn and Facebook' },
+]
+
+export const achievementTeam = [
+  { to: 10, suffix: '+', label: 'Specialists led and mentored', detail: 'Social and digital teams' },
+  { to: 7, suffix: '×', label: 'Employee of the Month', detail: 'Named seven times' },
+]
+
+export const achievementSystems = {
+  title: 'SOP Champion at INSIDEA',
+  text: "Responsible for automating and standardising the process: documenting workflows and automating the repetitive parts so the team spends its time on content, not process.",
+}
+
 export const achievementHighlights = [
   {
     title: 'Built a repeatable recognition campaign',
